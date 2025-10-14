@@ -19,12 +19,8 @@
 }
 
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -33,10 +29,58 @@
   }
 }
 
-.card {
-  padding: 2em;
+.card { padding: 2em; }
+.read-the-docs { color: #888; }
+
+/* Bookshelf Styles */
+.bookshelfDiv {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.read-the-docs {
-  color: #888;
+@media(min-width: 700px) {
+  .bookshelfDiv { flex-direction: row; justify-content: space-between; }
+  .formDiv, .bookCardsDiv { flex: 1; }
 }
+
+.formDiv { margin-bottom: 30px; }
+.formDiv h3 { margin-bottom: 10px; color: #333; }
+.formDiv form div { margin-bottom: 15px; }
+.formDiv label { display: inline-block; width: 60px; font-weight: bold; }
+.formDiv input {
+  padding: 6px 10px;
+  width: calc(100% - 70px);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.formDiv button {
+  padding: 8px 16px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.formDiv button:hover { background-color: #005fa3; }
+
+.bookCardsDiv { display: flex; flex-direction: column; gap: 15px; }
+
+.bookCard {
+  padding: 15px;
+  background-color: #e6f0ff;
+  border-radius: 8px;
+  border-left: 5px solid #0077cc;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.bookCard:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
+
+.bookCard h4 { margin: 0 0 5px 0; color: #005fa3; }
+.bookCard p { margin: 0; color: #333; }
